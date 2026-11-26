@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grinda Renovări</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav" aria-label="Main">
+        <a class="logo" href="#top"
+          ><svg viewBox="0 0 34 34" aria-hidden="true">
+            <rect width="34" height="34" rx="8" fill="#ff5a4e" />
+            <path
+              d="M7 25V13l10-6 10 6v12M7 19h20M13 25v-6M21 25v-6"
+              stroke="#fff"
+              stroke-width="2.6"
+              fill="none"
+              stroke-linejoin="round"
+            /></svg
+          >Grinda</a
+        >
+        <div class="links" id="links">
+          <a href="#services" data-i="n1"></a><a href="#calc" data-i="n2"></a
+          ><a href="#works" data-i="n3"></a><a href="#contact" data-i="n4"></a>
+        </div>
+        <div class="lang" role="group" aria-label="Language">
+          <button data-lang="ro">RO</button><button data-lang="ru">RU</button
+          ><button data-lang="en">EN</button>
+        </div>
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Menu"
+          aria-expanded="false"
+          aria-controls="links"
+        >
+          <svg viewBox="0 0 24 24" width="26" height="26">
+            <path
+              d="M3 6h18M3 12h18M3 18h18"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <section class="hero band" id="top">
+      <div class="wrap">
+        <div>
+          <h1 data-i="h1"></h1>
+          <p data-i="hp"></p>
+          <div class="cta">
+            <a class="btn coral" href="#calc" data-i="c1"></a
+            ><a class="btn line" href="#contact" data-i="c2"></a>
+          </div>
+          <ul class="badges">
+            <li data-i="b1"></li>
+            <li data-i="b2"></li>
+            <li data-i="b3"></li>
+          </ul>
+        </div>
+        <svg class="plan" viewBox="0 0 640 440" role="img" aria-label="Apartment floor plan">
+          <rect class="hot" x="330" y="40" width="270" height="200" />
+          <path class="wall" d="M40 40H600V400H40Z" />
+          <path class="wall" d="M330 40V140M330 190V240H600M330 240V400M40 250H160M220 250H330" />
+          <path
+            class="thin"
+            d="M330 140A50 50 0 0 1 380 190M330 190H380M160 250A60 60 0 0 0 220 310M220 250V310"
+          />
+          <path d="M90 40h120M440 400h110M600 290v70" stroke="#2346c9" stroke-width="8" />
+          <path class="thin" d="M90 34h120M90 46h120M440 394h110M440 406h110" />
+          <path class="thin" d="M40 18H600M40 12v12M600 12v12M620 40V400M614 40h12M614 400h12" />
+          <text x="320" y="12" text-anchor="middle">12.40 m</text>
+          <text x="634" y="225" transform="rotate(90 634 225)" text-anchor="middle">8.20 m</text>
+          <text x="465" y="146" text-anchor="middle" style="font-size: 22px; font-weight: 800">
+            24 m²
+          </text>
+          <text x="185" y="150" text-anchor="middle" style="font-size: 20px">32 m²</text>
+          <text x="185" y="335" text-anchor="middle" style="font-size: 20px">18 m²</text>
+          <text x="465" y="330" text-anchor="middle" style="font-size: 20px">21 m²</text>
+          <g transform="translate(70 270)" class="thin">
+            <rect width="70" height="110" rx="6" />
+            <path d="M0 30h70" />
+          </g>
+          <g transform="translate(380 270)" class="thin">
+            <rect width="180" height="40" />
+            <circle cx="150" cy="80" r="22" />
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="band" id="services">
+      <div class="wrap">
+        <h2 data-i="s_t"></h2>
+        <p class="sub" data-i="s_p"></p>
+        <div class="svc" id="svc"></div>
+      </div>
+    </section>
+
+    <section class="calc band" id="calc">
+      <div class="wrap">
+        <h2 data-i="k_t"></h2>
+        <p class="sub" data-i="k_p"></p>
+        <div class="calc-g">
+          <div>
+            <div class="field">
+              <span class="lb" data-i="k_obj"></span>
+              <div class="chips" id="obj"></div>
+            </div>
+            <div class="field">
+              <span class="lb" data-i="k_type"></span>
+              <div class="chips" id="typ"></div>
+              <p class="sub" id="typDesc" style="margin: 10px 0 0; font-size: 14px"></p>
+            </div>
+            <div class="field">
+              <label class="lb" for="areaN" data-i="k_area"></label>
+              <div class="area">
+                <input
+                  type="range"
+                  id="areaR"
+                  min="10"
+                  max="250"
+                  step="1"
+                  value="60"
+                  aria-label="m²"
+                /><input type="number" id="areaN" min="10" max="250" value="60" /><span class="unit"
+                  >m²</span
+                >
+              </div>
+            </div>
+            <div class="field">
+              <span class="lb" data-i="k_ext"></span>
+              <div class="checks" id="ext"></div>
+            </div>
+            <div class="field">
+              <span class="lb" data-i="k_mat"></span>
+              <div class="chips" id="mat"></div>
+            </div>
+          </div>
+          <div class="result" aria-live="polite">
+            <div class="k" data-i="r_price"></div>
+            <div class="price" id="rPrice"></div>
+            <div class="meta"><span id="rTime"></span><span id="rM2"></span></div>
+            <div class="bars" id="rBars"></div>
+            <a
+              class="btn coral"
+              href="#contact"
+              id="sendCalc"
+              data-i="r_send"
+              style="width: 100%"
+            ></a>
+            <p class="note" data-i="r_note"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="works">
+      <div class="wrap">
+        <h2 data-i="w_t"></h2>
+        <p class="sub" data-i="w_p"></p>
+        <div class="chips ba-tabs" id="baTabs"></div>
+        <div class="ba" id="ba">
+          <svg
+            class="before"
+            id="svgB"
+            viewBox="0 0 800 500"
+            preserveAspectRatio="xMidYMid slice"
+            aria-hidden="true"
+          ></svg>
+          <svg
+            class="after"
+            id="svgA"
+            viewBox="0 0 800 500"
+            preserveAspectRatio="xMidYMid slice"
+            aria-hidden="true"
+          ></svg>
+          <span class="tag l" data-i="w_b"></span><span class="tag r" data-i="w_a"></span>
+          <div class="handle"></div>
+          <input type="range" id="baR" min="0" max="100" value="50" aria-label="Before / after" />
+        </div>
+      </div>
+    </section>
+
+    <section class="band" style="padding-top: 0">
+      <div class="wrap">
+        <h2 data-i="p_t"></h2>
+        <ol class="steps" id="steps"></ol>
+      </div>
+    </section>
+
+    <section class="contact band" id="contact">
+      <div class="wrap">
+        <div class="info">
+          <h2 data-i="f_t"></h2>
+          <p class="sub" data-i="f_p"></p>
+          <p><b>+373 00 000 000</b></p>
+          <p>office@grinda.example</p>
+          <p class="soft">str. Constructorilor 14, Chișinău</p>
+          <p class="soft" data-i="f_h"></p>
+        </div>
+        <form id="req" novalidate>
+          <div class="row">
+            <label class="f"
+              ><span data-i="f_name"></span><input class="in" id="fName" autocomplete="name"
+            /></label>
+            <label class="f"
+              ><span data-i="f_phone"></span
+              ><input class="in" id="fPhone" type="tel" autocomplete="tel"
+            /></label>
+          </div>
+          <div class="dp" data-pick="obj">
+            <span id="fObjL" data-i="f_obj"></span>
+            <button
+              type="button"
+              class="dp-btn"
+              id="fObj"
+              aria-labelledby="fObjL fObjT"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              aria-controls="fObjP"
+            >
+              <span id="fObjT"></span
+              ><svg class="chev" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path
+                  d="M6 9l6 6 6-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div class="pop" id="fObjP" role="listbox" aria-labelledby="fObjL" hidden></div>
+          </div>
+          <label class="f"><span data-i="f_msg"></span><textarea id="fMsg"></textarea></label>
+          <div class="err" id="err" role="alert"></div>
+          <button class="btn coral" type="submit" data-i="f_send"></button>
+          <div class="ok" id="ok" role="status"></div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="band" style="padding-block: 28px">
+      <div class="wrap">
+        <b style="color: #fff">Grinda Renovări</b><span>© 2026 · Chișinău</span
+        ><span data-i="demo"></span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

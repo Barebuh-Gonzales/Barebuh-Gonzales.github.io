@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Boabe Coffee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Manrope:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav" aria-label="Main">
+        <a class="logo" href="#top">
+          <svg viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="19" fill="#e0313b" />
+            <ellipse cx="20" cy="20" rx="8" ry="12" fill="#f6efe6" transform="rotate(30 20 20)" />
+            <path
+              d="M15 11c6 6 4 12 10 18"
+              stroke="#e0313b"
+              stroke-width="2.4"
+              fill="none"
+              stroke-linecap="round"
+            />
+          </svg>
+          Boabe
+        </a>
+        <div class="links" id="links">
+          <a href="#about" data-i="nav_about"></a>
+          <a href="#menu" data-i="nav_menu"></a>
+          <a href="#visit" data-i="nav_visit"></a>
+        </div>
+        <div class="lang" role="group" aria-label="Language">
+          <button data-lang="ro">RO</button><button data-lang="ru">RU</button
+          ><button data-lang="en">EN</button>
+        </div>
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Menu"
+          aria-expanded="false"
+          aria-controls="links"
+        >
+          <svg viewBox="0 0 24 24" width="26" height="26">
+            <path
+              d="M3 6h18M3 12h18M3 18h18"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <section class="hero band" id="top">
+      <div class="wrap">
+        <div>
+          <h1><span data-i="hero_t1"></span><span class="where" data-i="hero_t2"></span></h1>
+          <p data-i="hero_p"></p>
+          <div class="cta">
+            <a class="btn red" href="#visit" data-i="cta_book"></a>
+            <a class="btn ghost" href="#menu" data-i="cta_menu"></a>
+          </div>
+          <div class="facts">
+            <div><b>7:30</b><span data-i="f_open"></span></div>
+            <div><b>3</b><span data-i="f_origin"></span></div>
+            <div><b>40</b><span data-i="f_seats"></span></div>
+          </div>
+        </div>
+        <svg
+          class="scene"
+          viewBox="0 0 500 500"
+          role="img"
+          aria-label="Illustration: cup of coffee"
+        >
+          <defs>
+            <radialGradient id="glow" cx=".5" cy=".55" r=".5">
+              <stop offset="0" stop-color="#d9a86c" stop-opacity=".45" />
+              <stop offset="1" stop-color="#d9a86c" stop-opacity="0" />
+            </radialGradient>
+            <linearGradient id="cup" x1="0" x2="1">
+              <stop offset="0" stop-color="#fffaf3" />
+              <stop offset=".7" stop-color="#efe3d4" />
+              <stop offset="1" stop-color="#d8c6b2" />
+            </linearGradient>
+            <radialGradient id="coffee" cx=".45" cy=".4" r=".6">
+              <stop offset="0" stop-color="#c98a4f" />
+              <stop offset=".55" stop-color="#7a4523" />
+              <stop offset="1" stop-color="#3d2112" />
+            </radialGradient>
+            <g id="bean">
+              <ellipse rx="15" ry="22" fill="#5a3320" />
+              <ellipse rx="15" ry="22" fill="#7a4a2d" transform="translate(-3 -3) scale(.85)" />
+              <path
+                d="M-4 -18c8 10 0 24 6 36"
+                stroke="#2a160c"
+                stroke-width="3"
+                fill="none"
+                stroke-linecap="round"
+              />
+            </g>
+          </defs>
+          <circle cx="250" cy="270" r="230" fill="url(#glow)" />
+          <circle cx="250" cy="250" r="190" fill="#3a2418" />
+          <circle
+            cx="250"
+            cy="250"
+            r="190"
+            fill="none"
+            stroke="#e0313b"
+            stroke-width="3"
+            stroke-dasharray="4 10"
+          />
+          <use href="#bean" transform="translate(95 360) rotate(-30)" />
+          <use href="#bean" transform="translate(410 345) rotate(40)" />
+          <use href="#bean" transform="translate(380 140) rotate(70) scale(.8)" />
+          <use href="#bean" transform="translate(120 150) rotate(-60) scale(.7)" />
+          <ellipse cx="250" cy="392" rx="150" ry="26" fill="#170d08" opacity=".55" />
+          <ellipse cx="250" cy="380" rx="140" ry="28" fill="#efe3d4" />
+          <ellipse cx="250" cy="376" rx="118" ry="20" fill="#d8c6b2" />
+          <path
+            d="M340 255c46-6 62 22 56 46-7 28-36 42-70 42"
+            stroke="url(#cup)"
+            stroke-width="20"
+            fill="none"
+            stroke-linecap="round"
+          />
+          <path
+            d="M150 230h200l-14 118c-3 20-20 34-40 34h-92c-20 0-37-14-40-34z"
+            fill="url(#cup)"
+          />
+          <path
+            d="M160 240h18l-12 104c-1 8 4 16 10 20-14-2-24-12-26-24z"
+            fill="#fff"
+            opacity=".7"
+          />
+          <ellipse cx="250" cy="230" rx="100" ry="22" fill="#efe3d4" />
+          <ellipse cx="250" cy="232" rx="88" ry="16" fill="url(#coffee)" />
+          <path
+            d="M250 222c-16 0-24 8-16 14 6 4 10 0 16 4 6-4 10 0 16-4 8-6 0-14-16-14z"
+            fill="#f2d7b3"
+            opacity=".9"
+          />
+          <g
+            class="steam"
+            fill="none"
+            stroke="#f6efe6"
+            stroke-width="6"
+            stroke-linecap="round"
+            opacity=".8"
+          >
+            <path d="M215 190c-14-22 14-34 0-58" />
+            <path d="M250 186c-14-24 16-36 0-64" />
+            <path d="M285 190c-14-22 14-34 0-58" />
+          </g>
+          <g transform="translate(330 70) rotate(12)">
+            <rect x="-62" y="-26" width="124" height="52" rx="10" fill="#e0313b" />
+            <text
+              x="0"
+              y="7"
+              text-anchor="middle"
+              font-family="Unbounded,sans-serif"
+              font-weight="800"
+              font-size="20"
+              fill="#fff"
+            >
+              CHIȘINĂU
+            </text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="about band" id="about">
+      <div class="wrap">
+        <div class="intro">
+          <h2 data-i="ab_t"></h2>
+          <p data-i="ab_p"></p>
+        </div>
+        <div class="feat">
+          <svg viewBox="0 0 44 44">
+            <circle cx="22" cy="22" r="21" fill="#e0313b" />
+            <path
+              d="M14 24c4-10 12-10 16 0"
+              stroke="#fff"
+              stroke-width="3"
+              fill="none"
+              stroke-linecap="round"
+            />
+            <circle cx="22" cy="28" r="3" fill="#fff" />
+          </svg>
+          <h3 data-i="ft1_t"></h3>
+          <p data-i="ft1_p"></p>
+        </div>
+        <div class="feat">
+          <svg viewBox="0 0 44 44">
+            <circle cx="22" cy="22" r="21" fill="#d9a86c" />
+            <path d="M13 14h18l-2 16H15z" fill="#fff" />
+          </svg>
+          <h3 data-i="ft2_t"></h3>
+          <p data-i="ft2_p"></p>
+        </div>
+        <div class="feat">
+          <svg viewBox="0 0 44 44">
+            <circle cx="22" cy="22" r="21" fill="#3a2418" />
+            <g transform="translate(0 -2)">
+              <rect
+                x="12"
+                y="14"
+                width="20"
+                height="16"
+                rx="3"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2.5"
+              />
+              <path d="M16 30v4M28 30v4M12 20h20" stroke="#fff" stroke-width="2.5" />
+            </g>
+          </svg>
+          <h3 data-i="ft3_t"></h3>
+          <p data-i="ft3_p"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu band" id="menu">
+      <div class="wrap">
+        <h2 data-i="mn_t"></h2>
+        <div class="tabs" role="tablist" id="tabs"></div>
+        <ul class="items" id="items"></ul>
+      </div>
+    </section>
+
+    <section class="visit band" id="visit">
+      <div class="wrap">
+        <div>
+          <h2 data-i="vs_t"></h2>
+          <ul class="hours" id="hours"></ul>
+          <p class="addr">
+            <strong data-i="vs_addr_l"></strong><br />str. Boabelor 7, Chișinău<br />+373 00 000 000
+            · hello@boabe.example
+          </p>
+        </div>
+        <form id="book" novalidate>
+          <h3 data-i="bk_t" style="font-size: 22px; margin: 0"></h3>
+          <div class="row">
+            <label
+              ><span data-i="bk_name"></span><input id="b-name" autocomplete="name" required
+            /></label>
+            <label
+              ><span data-i="bk_phone"></span
+              ><input id="b-phone" type="tel" autocomplete="tel" required
+            /></label>
+          </div>
+          <div class="row">
+            <div class="dp">
+              <span class="lbl" id="b-date-l" data-i="bk_date"></span>
+              <button
+                type="button"
+                id="b-date"
+                class="dp-btn"
+                aria-labelledby="b-date-l b-date-txt"
+                aria-haspopup="dialog"
+                aria-expanded="false"
+                aria-controls="cal"
+              >
+                <span id="b-date-txt"></span>
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                  <rect
+                    x="3.5"
+                    y="5"
+                    width="17"
+                    height="15"
+                    rx="3"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M3.5 10h17M8 3v4M16 3v4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+              <div class="cal" id="cal" role="dialog" aria-modal="false" hidden></div>
+            </div>
+            <div class="dp" data-pick="time">
+              <span class="lbl" id="b-time-l" data-i="bk_time"></span>
+              <button
+                type="button"
+                id="b-time"
+                class="dp-btn"
+                aria-labelledby="b-time-l b-time-txt"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="pop-time"
+              >
+                <span id="b-time-txt"></span
+                ><svg class="chev" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                  <path
+                    d="M6 9l6 6 6-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div class="pop" id="pop-time" role="listbox" aria-labelledby="b-time-l" hidden></div>
+            </div>
+          </div>
+          <div class="dp" data-pick="guests">
+            <span class="lbl" id="b-guests-l" data-i="bk_guests"></span>
+            <button
+              type="button"
+              id="b-guests"
+              class="dp-btn"
+              aria-labelledby="b-guests-l b-guests-txt"
+              aria-haspopup="listbox"
+              aria-expanded="false"
+              aria-controls="pop-guests"
+            >
+              <span id="b-guests-txt"></span
+              ><svg class="chev" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path
+                  d="M6 9l6 6 6-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div
+              class="pop"
+              id="pop-guests"
+              role="listbox"
+              aria-labelledby="b-guests-l"
+              hidden
+            ></div>
+          </div>
+          <label><span data-i="bk_note"></span><textarea id="b-note"></textarea></label>
+          <div class="err" id="err" role="alert"></div>
+          <button class="btn red" type="submit" data-i="bk_send"></button>
+          <div class="ok" id="ok" role="status"></div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="band" style="padding-block: 28px">
+      <div class="wrap">
+        <span class="logo">Boabe Coffee</span>
+        <span>© 2026 Boabe · str. Boabelor 7, Chișinău</span>
+        <span class="demo" data-i="demo"></span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
